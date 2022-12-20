@@ -6,10 +6,15 @@ from columns_info import column_info_data
 
 laptop = pd.read_csv('data/laptop_price.csv', encoding= 'latin-1')
 laptop['Weight'] = laptop['Weight'].str.split('k').str[0].astype(float)
-laptop['Ram'] = laptop['Ram'].str.split('G').str[0]
+laptop['Ram'] = laptop['Ram'].str.split('G').str[0].astype(float)
 laptop = laptop.drop(columns= 'laptop_ID')
 
 def run_eda_app():
+    img2 = st.sidebar.image('https://1000logos.net/wp-content/uploads/2016/10/apple-emblem.jpg')
+    img3 = st.sidebar.image('https://images.samsung.com/kdp/aboutsamsung/brand_identity/logo/360_197_1.png?$FB_TYPE_B_PNG$')
+    img1 = st.sidebar.image('https://static.vecteezy.com/system/resources/previews/006/892/682/original/microsoft-logo-icon-editorial-free-vector.jpg')
+
+
     
     st.text(' ')
     st.text(' ')
@@ -101,3 +106,16 @@ def run_eda_app():
         
     with tab2:
         st.dataframe(laptop[laptop['Weight'] == laptop['Weight'].min()])
+
+    st.text('')
+    st.text('')
+    
+    st.markdown('#### 상관계수 구하기')
+    st.text('숫자로 되어있는 컬럼들의 상관계수 값을 구해줍니다')
+    
+    selected_list = st.multiselect('원하는 컬럼을 선택하세요', ['Inches', 'Ram','Weight','Price_euros'])
+    if selected_list :
+        st.dataframe(laptop[selected_list].corr()) 
+
+    else :
+        st.text('')
