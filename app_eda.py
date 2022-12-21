@@ -3,10 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
 from columns_info import column_info_data
+import seaborn as sb
 
 laptop = pd.read_csv('data/laptop_price.csv', encoding= 'latin-1')
 laptop['Weight'] = laptop['Weight'].str.split('k').str[0].astype(float)
 laptop['Ram'] = laptop['Ram'].str.split('G').str[0].astype(float)
+laptop['Memory'] = laptop['Memory'].str.replace('T','024G').str.split('G').str[0].astype(float)
 laptop = laptop.drop(columns= 'laptop_ID')
 
 def run_eda_app():
@@ -109,13 +111,21 @@ def run_eda_app():
 
     st.text('')
     st.text('')
-    
-    st.markdown('#### 상관계수 구하기')
-    st.text('숫자로 되어있는 컬럼들의 상관계수 값을 구해줍니다')
-    
-    selected_list = st.multiselect('원하는 컬럼을 선택하세요', ['Inches', 'Ram','Weight','Price_euros'])
-    if selected_list :
-        st.dataframe(laptop[selected_list].corr()) 
+    st.text('')
 
-    else :
-        st.text('')
+    # pairplot 으로 데이터 비교하기
+    st.markdown('#### 차트를 이용하여 성능과 가격을 비교해줍니다')
+
+
+    function = ['Inches', 'Ram','Weight','Memory']
+    function_choice = st.selectbox('가격과 비교하고자 하는 데이터를 선택하세요.', function)
+    st.text('')
+
+    data = laptop.groupby(function_choice)['Price_euros'].mean().to_frame().reset_index()
+
+    fig3 = sb.pairplot(data= data, vars=[function_choice, 'Price_euros'])
+    st.pyplot(fig3)
+
+    # 상관계수 구하기
+    st.markdown('##### 상관계수')
+    st.dataframe(data[[function_choice, 'Price_euros']].corr()) 
