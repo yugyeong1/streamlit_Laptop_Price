@@ -12,6 +12,7 @@ laptop['Memory'] = laptop['Memory'].str.replace('T','024G').str.split('G').str[0
 laptop = laptop.drop(columns= 'laptop_ID')
 
 def run_eda_app():
+
     img2 = st.sidebar.image('https://1000logos.net/wp-content/uploads/2016/10/apple-emblem.jpg')
     img3 = st.sidebar.image('https://images.samsung.com/kdp/aboutsamsung/brand_identity/logo/360_197_1.png?$FB_TYPE_B_PNG$')
     img1 = st.sidebar.image('https://static.vecteezy.com/system/resources/previews/006/892/682/original/microsoft-logo-icon-editorial-free-vector.jpg')

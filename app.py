@@ -5,7 +5,7 @@ from app_user_choice_product import run_app_user_choice
 from app_about import run_about_app
 
 def main() :
-    st.title('Laptop Company Price List  분석')
+    st.title('Laptop Price List 데이터 분석 앱 💻')
 
 
     menu = ['Home', 'EDA', 'User choice product', 'About']

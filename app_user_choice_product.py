@@ -8,10 +8,10 @@ laptop = pd.read_csv('data/laptop_price.csv', encoding= 'latin-1')
 laptop = laptop.drop(columns= 'laptop_ID')
 
 def run_app_user_choice():
-
-    img4 = st.sidebar.image('https://blog.elpo.net/wp-content/uploads/2021/09/lenovo-bootlogo.png')
-    img2 = st.sidebar.image('https://dlcdnimgs.asus.com/websites/global/Sno/79183.jpg')
-    img3 = st.sidebar.image('https://www.pngplay.com/wp-content/uploads/9/HP-Logo-Download-Free-PNG.png')
+    
+    img2 = st.sidebar.image('https://blog.elpo.net/wp-content/uploads/2021/09/lenovo-bootlogo.png')
+    img3 = st.sidebar.image('https://dlcdnimgs.asus.com/websites/global/Sno/79183.jpg')
+    img4 = st.sidebar.image('https://www.pngplay.com/wp-content/uploads/9/HP-Logo-Download-Free-PNG.png')
 
 
 
@@ -48,6 +48,7 @@ def run_app_user_choice():
         with tab3 :
             st.dataframe(laptop.sort_values('Weight', ascending= True))
 
+
         st.text('')
 
     if check2 :
@@ -79,3 +80,5 @@ def run_app_user_choice():
         st.text('')
 
         st.dataframe(weight_choice_frame)
+
+    column_info_data()
