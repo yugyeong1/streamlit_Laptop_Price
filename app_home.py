@@ -15,7 +15,7 @@ def run_home_app() :
     st.text('')
 
     with st.expander('대시보드 설명') :
-        st.text('이 앱은 캐글의 Laptop Price 데이터를 이용하여서, ')
+        st.text('이 앱은 Kaggle의 Laptop Price 데이터를 이용하여서, ')
         st.text('Laptop 의 기본 성능과 가격을 분석하여 데이터를 비교하였고,')
         st.text('사용자가 원하는 노트북 옵션을 선택하면, 해당 옵션 기능이 있는 노트북을 추천해주는 앱 입니다.')
         st.text('데이터 출처 : https://www.kaggle.com/datasets/muhammetvarl/laptop-price')
