@@ -6,6 +6,7 @@ from columns_info import column_info_data
 
 
 def run_home_app() :
+    img1 = st.sidebar.image('https://file.bodnara.co.kr/logo/insidelogo.php?image=%2Fhttp%3A%2F%2Ffile.bodnara.co.kr%2Fwebedit%2Fnews%2F2015%2F1653444904-22052505.jpg')
     img2 = st.sidebar.image('https://www.pchouse.com.bd/image/cache/catalog/Brand%20Logo/chuwi-600x315h.jpg', use_column_width= True)
     img4 = st.sidebar.image('https://sg-live-01.slatic.net/p/7b0e3dd525ac2b27d6c5c3a28345bd4f.jpg')
     img3 = st.sidebar.image('https://kr.moyens.net/wp-content/uploads/2022/03/1646282416_iPhone-iPad-%EB%B0%8F-Mac%EC%97%90%EC%84%9C-Apple-%EB%A1%9C%EA%B3%A0%EB%A5%BC-%EC%9E%85%EB%A0%A5%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95.jpg')
