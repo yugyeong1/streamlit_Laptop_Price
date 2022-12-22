@@ -1,7 +1,7 @@
 <br/>
 <div align="center">
 
-# 📌 Laptop Price List 데이터 분석 대시보드 앱 개발
+# 📌 Laptop Price List 데이터 분석 대시보드 앱 개발 💻
  
 
 </div>  
@@ -87,4 +87,53 @@ http://ec2-3-36-60-118.ap-northeast-2.compute.amazonaws.com:8504/
 
 
 ### 📷 앱 대시보드 화면
+
+
+#### ✨ home 화면
+
+![image](https://user-images.githubusercontent.com/104052659/209030537-e760071a-9fde-4d96-acd0-f5d870ea915b.png)
+
+<br/>
+
+#### ✨ EDA 화면
+
+![image](https://user-images.githubusercontent.com/104052659/209030627-02547972-31ba-4050-9ed6-e27565dd7774.png)
+
+<br/>
+
+![image](https://user-images.githubusercontent.com/104052659/209030901-1f46d228-114e-495c-9c1f-43eb55e50198.png)
+
+<br/>
+
+![image](https://user-images.githubusercontent.com/104052659/209030932-6dcee5f2-bb7a-44f3-90e9-02077c1c8b9f.png)
+
+<br/>
+
+![image](https://user-images.githubusercontent.com/104052659/209030973-9f5916b4-58f4-4ae9-ad49-d2cf2d55b06b.png)
+
+<br/>
+
+![image](https://user-images.githubusercontent.com/104052659/209031021-649534ad-ebcd-47cc-ab59-7acd39085c46.png)
+
+<br/>
+
+#### ✨ User Choice Product 화면
+
+![image](https://user-images.githubusercontent.com/104052659/209031080-deeab91f-4ef3-466e-b6da-703bbb56cd2f.png)
+
+<br/>
+
+![image](https://user-images.githubusercontent.com/104052659/209031199-0a1483cd-8751-451e-aeb4-2c9110c88ca0.png)
+
+<br/>
+
+
+#### ✨ About 화면
+
+![image](https://user-images.githubusercontent.com/104052659/209031244-f598c0fc-a5ee-4419-9f5b-bb6029df961a.png)
+
+
+
+
+
 
