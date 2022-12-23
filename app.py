@@ -9,8 +9,8 @@ def main() :
 
 
     menu = ['Home', 'EDA', 'User choice product', 'About']
- 
     choice = st.sidebar.selectbox('메뉴', menu)
+    st.sidebar.text('')
 
 
 
