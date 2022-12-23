@@ -1,7 +1,7 @@
 <br/>
 <div align="center">
 
-# 📌 Laptop Price List 데이터 분석 대시보드 앱 개발 💻
+# 📌 Laptop Price List 데이터 분석 웹 대시보드 개발 💻
  
 
 </div>  
