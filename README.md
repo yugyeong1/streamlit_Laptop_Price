@@ -91,7 +91,7 @@ http://ec2-3-36-60-118.ap-northeast-2.compute.amazonaws.com:8504/
 
 #### ✨ home 화면
 
-![image](https://user-images.githubusercontent.com/104052659/209490014-64599dd8-3d18-489f-8844-193ac6ac2466.png)
+![image](https://user-images.githubusercontent.com/104052659/209490173-00e9ccfe-3a85-49ba-a3ba-9fd6476315fe.png)
 
 <br/>
 
