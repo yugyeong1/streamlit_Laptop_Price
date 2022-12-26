@@ -91,17 +91,17 @@ http://ec2-3-36-60-118.ap-northeast-2.compute.amazonaws.com:8504/
 
 #### ✨ home 화면
 
-![image](https://user-images.githubusercontent.com/104052659/209030537-e760071a-9fde-4d96-acd0-f5d870ea915b.png)
+![image](https://user-images.githubusercontent.com/104052659/209490014-64599dd8-3d18-489f-8844-193ac6ac2466.png)
 
 <br/>
 
 #### ✨ EDA 화면
 
-![image](https://user-images.githubusercontent.com/104052659/209030627-02547972-31ba-4050-9ed6-e27565dd7774.png)
+
 
 <br/>
 
-![image](https://user-images.githubusercontent.com/104052659/209030901-1f46d228-114e-495c-9c1f-43eb55e50198.png)
+![image](https://user-images.githubusercontent.com/104052659/209490049-ea012c68-0ed3-43fb-9848-bde4a8af6d26.png)
 
 <br/>
 
@@ -119,7 +119,7 @@ http://ec2-3-36-60-118.ap-northeast-2.compute.amazonaws.com:8504/
 
 #### ✨ User Choice Product 화면
 
-![image](https://user-images.githubusercontent.com/104052659/209031080-deeab91f-4ef3-466e-b6da-703bbb56cd2f.png)
+![image](https://user-images.githubusercontent.com/104052659/209490091-0296759d-4d65-454e-a9d6-1fe1bf54eb77.png)
 
 <br/>
 
@@ -130,7 +130,7 @@ http://ec2-3-36-60-118.ap-northeast-2.compute.amazonaws.com:8504/
 
 #### ✨ About 화면
 
-![image](https://user-images.githubusercontent.com/104052659/209031244-f598c0fc-a5ee-4419-9f5b-bb6029df961a.png)
+![image](https://user-images.githubusercontent.com/104052659/209490105-a5ee1958-e139-4c0a-a27f-2d1b473dc600.png)
 
 
 
