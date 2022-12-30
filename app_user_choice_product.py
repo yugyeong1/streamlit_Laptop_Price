@@ -3,9 +3,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
 from columns_info import column_info_data
+import joblib
+import numpy as np
+
 
 laptop = pd.read_csv('data/laptop_price.csv', encoding= 'latin-1')
 laptop = laptop.drop(columns= 'laptop_ID')
+float_laptop = pd.read_csv('float_laptop.csv', index_col= 0)
+
+regressor = joblib.load('regressor.pkl')
+ct = joblib.load('ct.pkl')
 
 def run_app_user_choice():
     
@@ -27,31 +34,35 @@ def run_app_user_choice():
     with col2 :
         st.text('')
         st.text('')
+        
+        status = st.radio(' ', ['📈 제품 가격 예측하기', '📈 사용자가 선택한 제품 데이터 보기'] )
+
+
+
+    if status == '📈 제품 가격 예측하기':
+        st.text('')
+        st.markdown('#### 옵션을 선택하면 가격을 예측합니다! 💻')
+        st.text('')
+        typename = st.selectbox('노트북 타입을 선택하세요.', float_laptop['TypeName'].unique())
+        inch = st.selectbox('원하는 인치를 선택하세요 ', float_laptop['Inches'].sort_values().unique()) 
+        cpu = st.selectbox('원하는 Cpu 를 선택하세요 ', float_laptop['Cpu'].sort_values().unique())
+        ram = st.selectbox('원하는 Ram 을 선택하세요 ', float_laptop['Ram'].sort_values().unique())
+        memory = st.selectbox('원하는 Memory 을 선택하세요 ', float_laptop['Memory'].sort_values().unique())
+        weight = st.selectbox('원하는 Weight 를 선택하세요 (kg)', float_laptop['Weight'].sort_values().unique(), on_change=None)
+
+
+        new_data = np.array([typename, inch,cpu, ram, memory, weight])
+        new_data = new_data.reshape(1,6)
+        new_data = ct.transform(new_data)
+        new_data_pred = regressor.predict(new_data)
         st.text('')
 
-        check1 = st.checkbox('📈 기본 데이터프레임 보기', value = True)
-        check2 = st.checkbox('📈 사용자가 선택한 제품 데이터 보기')
+        st.info('선택한 옵션의 노트북 예상 가격은 {} euro 입니다. '.format(new_data_pred[0]))
 
 
 
-    if check1 :
-        st.text('')
-        st.text('')
-        tab1, tab2, tab3 = st.tabs(["📑 기본 정렬", "📄 가격 저렴한 순" , '📑 무게가 가벼운 순'])
 
-        with tab1 :
-            st.dataframe(laptop)
-
-        with tab2 :
-            st.dataframe(laptop.sort_values('Price_euros', ascending= True))
-
-        with tab3 :
-            st.dataframe(laptop.sort_values('Weight', ascending= True))
-
-
-        st.text('')
-
-    if check2 :
+    if status == '📈 사용자가 선택한 제품 데이터 보기' :
        
         st.text('')
         st.markdown('#### 💻 원하는 옵션을 선택해주세요! 💻')
@@ -78,7 +89,6 @@ def run_app_user_choice():
         st.text('')
         st.markdown('#### 📢 선택한 옵션과 일치하는 데이터입니다.')
         st.text('')
-
         st.dataframe(weight_choice_frame)
 
-    column_info_data()
+        column_info_data()
