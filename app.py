@@ -13,6 +13,7 @@ def main() :
 
 
 
+
     if choice == 'Home' :
         run_home_app()
     elif choice == 'EDA' :
